@@ -53,17 +53,17 @@ export default function Contact() {
     {
       name: "GitHub",
       icon: <FaGithub />,
-      href: "#",
+      href: "https://github.com/aripp666",
     },
-    {
+  {
       name: "LinkedIn",
       icon: <FaLinkedin />,
-      href: "#",
+      href: "https://www.linkedin.com/in/muhammad-arif-ilham-73ba1a3b3/",
     },
     {
       name: "Instagram",
       icon: <FaInstagram />,
-      href: "#",
+      href: "https://www.instagram.com/ariifilhamm",
     },
     {
       name: "WhatsApp",
