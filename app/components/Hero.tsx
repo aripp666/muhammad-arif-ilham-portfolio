@@ -141,12 +141,12 @@ export default function Hero() {
           <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-900/60 p-5 backdrop-blur-xl shadow-2xl shadow-cyan-500/10">
             <div className="relative overflow-hidden rounded-[2rem] border border-cyan-400/20 bg-slate-950">
               <Image
-                src="/profile.jpg"
+                src="/profilee.jpeg"
                 alt="Muhammad Arif Ilham"
                 width={520}
                 height={620}
                 priority
-className="h-[390px] w-full object-cover md:h-[420px]"
+                className="h-[390px] w-full object-cover md:h-[500px]"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />

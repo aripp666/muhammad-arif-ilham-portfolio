@@ -3,6 +3,8 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Certification from "./components/Certification";
+//import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -30,15 +32,27 @@ export default function Home() {
         <div className="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_top_left,#0e7490_0%,transparent_35%),radial-gradient(circle_at_bottom_right,#7c3aed_0%,transparent_35%)]" />
         <div className="fixed inset-0 -z-20 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:70px_70px]" />
 
-        <Navbar />
-        <Hero />
-        <Stats />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-        <Footer />
+       <Navbar />
+
+<Hero />
+
+<Stats />
+
+<About />
+
+<Skills />
+
+<Experience />
+
+<Certification />
+
+<Projects />
+
+{/* <Gallery /> */}
+
+<Contact />
+
+<Footer />
       </main>
     </TempScroll>
   );
