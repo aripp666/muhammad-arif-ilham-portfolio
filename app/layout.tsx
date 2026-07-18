@@ -12,51 +12,76 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const WEBSITE_URL =
+  "https://muhammad-arif-ilham-portfolio.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(WEBSITE_URL),
+
   title: {
     default: "Muhammad Arif Ilham | Full Stack Developer",
     template: "%s | Muhammad Arif Ilham",
   },
 
   description:
-    "Portfolio Muhammad Arif Ilham, Full Stack Developer yang berfokus pada Laravel, React JS, Next.js, Inertia, Tailwind CSS, MySQL, GIS, AI, dan pengembangan aplikasi web modern.",
+    "Portfolio Muhammad Arif Ilham, Full Stack Developer yang berfokus pada Laravel, React.js, Next.js, Inertia.js, Tailwind CSS, MySQL, GIS, Machine Learning, dan pengembangan aplikasi web modern.",
 
   keywords: [
     "Muhammad Arif Ilham",
-    "Ilham Developer",
     "Full Stack Developer",
     "Laravel Developer",
     "React Developer",
     "Next.js Developer",
-    "Inertia JS",
+    "TypeScript",
+    "Inertia.js",
     "Tailwind CSS",
+    "JavaScript",
     "MySQL",
-    "GIS Developer",
+    "PostgreSQL",
+    "GIS",
     "OpenLayers",
     "Machine Learning",
-    "Portfolio Developer",
+    "Artificial Intelligence",
+    "Portfolio",
     "Web Developer Indonesia",
-    "Pekanbaru Developer",
+    "Pekanbaru",
+    "Software Engineer",
   ],
 
   authors: [
     {
       name: "Muhammad Arif Ilham",
+      url: WEBSITE_URL,
     },
   ],
 
   creator: "Muhammad Arif Ilham",
 
-  metadataBase: new URL(
-    "https://your-domain.com"
-  ),
+  publisher: "Muhammad Arif Ilham",
+
+  alternates: {
+    canonical: WEBSITE_URL,
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 
   openGraph: {
     title: "Muhammad Arif Ilham | Full Stack Developer",
-    description:
-      "Portfolio Full Stack Developer dengan pengalaman Laravel, React JS, Next.js, GIS, AI, dan berbagai project web modern.",
 
-    url: "https://your-domain.com",
+    description:
+      "Explore my portfolio showcasing modern web applications, Laravel, React.js, Next.js, GIS, AI, and Full Stack Development projects.",
+
+    url: WEBSITE_URL,
 
     siteName: "Muhammad Arif Ilham Portfolio",
 
@@ -76,23 +101,26 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
+
     title: "Muhammad Arif Ilham | Full Stack Developer",
+
     description:
-      "Portfolio Full Stack Developer dengan fokus Laravel, React JS, Next.js, GIS, dan AI.",
+      "Portfolio of Muhammad Arif Ilham — Full Stack Developer specializing in Laravel, React.js, Next.js, GIS and Artificial Intelligence.",
 
     images: ["/og-image.png"],
-  },
 
-  robots: {
-    index: true,
-    follow: true,
+    creator: "@ariifilhamm",
   },
 
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
-  },
+  icon: "/logocv.ico",
+  shortcut: "/logocv.ico",
+  apple: "/logocv.ico",
+},
+
+  manifest: "/manifest.json",
+
+  category: "technology",
 };
 
 export default function RootLayout({
@@ -103,9 +131,10 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="min-h-full bg-slate-950 text-white">
+      <body className="min-h-screen bg-slate-950 text-white antialiased">
         {children}
       </body>
     </html>

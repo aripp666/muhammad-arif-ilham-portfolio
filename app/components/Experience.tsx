@@ -18,7 +18,7 @@ export default function Experience() {
       icon: <BriefcaseBusiness size={22} />,
     },
     {
-      year: "Januari 2025 - Januari 2026",
+      year: "Januari 2025 - Sekarang",
       title: "Tenaga Ahli IT",
       place: "Masjid Raya An-Nur Provinsi Riau",
       desc: "Mengembangkan dan memelihara aplikasi web full stack menggunakan Laravel dan React JS.",

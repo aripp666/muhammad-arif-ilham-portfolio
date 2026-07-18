@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Code2, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function LoadingScreen() {
   const [show, setShow] = useState(true);
@@ -60,22 +61,68 @@ export default function LoadingScreen() {
 
           <div className="relative z-10 text-center">
             <motion.div
-              initial={{ scale: 0.75, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-[2rem] border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 shadow-2xl shadow-cyan-400/20 backdrop-blur-xl"
-            >
-              <Code2 size={42} />
-            </motion.div>
+  initial={{
+    scale: 0.7,
+    opacity: 0,
+    rotate: -10,
+  }}
+  animate={{
+    scale: 1,
+    opacity: 1,
+    rotate: 0,
+  }}
+  transition={{
+    duration: 0.8,
+    ease: "easeOut",
+  }}
+  className="relative mx-auto mb-8 h-32 w-32"
+>
 
-            <motion.h1
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.55, delay: 0.1 }}
-              className="glow-text text-6xl font-black tracking-widest text-cyan-400 md:text-8xl"
-            >
-              M.A.I
-            </motion.h1>
+  <motion.div
+    animate={{
+      rotate: 360,
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 18,
+      ease: "linear",
+    }}
+    className="absolute inset-0 rounded-full border border-cyan-400/20"
+  />
+
+  <motion.div
+    animate={{
+      rotate: -360,
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 12,
+      ease: "linear",
+    }}
+    className="absolute inset-2 rounded-full border border-purple-400/20"
+  />
+
+  <motion.div
+    animate={{
+      y: [0, -6, 0],
+      scale: [1, 1.03, 1],
+    }}
+    transition={{
+      repeat: Infinity,
+      duration: 3,
+    }}
+    className="absolute inset-4 overflow-hidden rounded-full border border-white/10 bg-white/5 backdrop-blur-xl"
+  >
+    <Image
+      src="/logocv.png"
+      alt="Muhammad Arif Ilham"
+      fill
+      priority
+      className="object-contain p-4"
+    />
+  </motion.div>
+
+</motion.div>
 
             <motion.p
               initial={{ opacity: 0, y: 15 }}
