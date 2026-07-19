@@ -86,16 +86,16 @@ const certificates: Certificate[] = [
       "MikroTik Certified Network Associate.",
   },
   {
-    id: 5,
-    title: "Internship",
-    issuer: "Bank Riau Kepri Syariah",
-    year: "2026",
-    category: "Internship",
-    image: "/certificates/serti-brk.png",
-    verified: true,
-    description:
-      "Internship in Accounting and Tax Division.",
-  },
+  id: 5,
+  title: "Internship",
+  issuer: "Bank Riau Kepri Syariah",
+  year: "2026",
+  category: "Internship",
+  image: "/certificates/serti-brk.png",
+  verified: true,
+  description:
+    "Internship at the Corporate Secretariat Division, Bank Riau Kepri Syariah, Pekanbaru Main Branch.",
+},
   {
     id: 6,
     title: "Career Development Program",

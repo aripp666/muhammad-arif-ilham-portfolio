@@ -12,7 +12,7 @@ export default function Experience() {
   const experiences = [
     {
       year: "Maret 2026 - Juli 2026",
-      title: "Magang",
+      title: "Application and Information Technology Intern",
       place: "Dinas Komunikasi Informatika dan Statistik Provinsi Riau",
       desc: "Mendukung kegiatan pengembangan dan pengelolaan sistem informasi, dokumentasi digital, serta kebutuhan teknologi informasi di lingkungan instansi pemerintahan.",
       icon: <BriefcaseBusiness size={22} />,
@@ -24,13 +24,13 @@ export default function Experience() {
       desc: "Mengembangkan dan memelihara aplikasi web full stack menggunakan Laravel dan React JS.",
       icon: <Building2 size={22} />,
     },
-    {
-      year: "September 2025 - Januari 2026",
-      title: "Magang",
-      place: "Bank Riau Kepri Syari’ah",
-      desc: "Membantu pengelolaan user, dokumen resmi, surat menyurat, dan aplikasi internal perusahaan.",
-      icon: <Landmark size={22} />,
-    },
+   {
+    year: "September 2025 - January 2026",
+    title: "Corporate Secretariat Intern",
+    place: "Bank Riau Kepri Syariah – Pekanbaru Main Branch",
+    desc: "Membantu Divisi Sekretariat Perusahaan dalam pengelolaan akun pengguna, dokumen resmi perusahaan, surat menyurat, serta pengelolaan dan pemeliharaan aplikasi internal perusahaan.",
+    icon: <Landmark size={22} />,
+  },
     {
       year: "2022 - Sekarang",
       title: "D4 Teknik Informatika",
