@@ -107,6 +107,19 @@ const certificates: Certificate[] = [
     description:
       "Public Speaking for Professional Career.",
   },
+  {
+  id: 7,
+  title: "Sekolah Pasar Modal",
+  issuer: "Bursa Efek Indonesia (BEI)",
+  year: "2026",
+  category: "Development",
+  image: "/certificates/BEI-SPM.png",
+  verified: true,
+  credential: "Sekolah Pasar Modal",
+  description:
+    "Successfully completed the Sekolah Pasar Modal program organized by the Indonesia Stock Exchange (BEI), covering fundamental knowledge of capital markets, stock investing, and financial literacy.",
+},
+
 ];
 
 const filters: ("All" | Category)[] = [
