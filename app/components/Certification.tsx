@@ -113,7 +113,7 @@ const certificates: Certificate[] = [
   issuer: "Bursa Efek Indonesia (BEI)",
   year: "2026",
   category: "Development",
-  image: "/certificates/BEI-SPM.png",
+  image: "/certificates/BEI-SPM.jpeg",
   verified: true,
   credential: "Sekolah Pasar Modal",
   description:
