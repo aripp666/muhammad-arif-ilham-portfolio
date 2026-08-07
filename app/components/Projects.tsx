@@ -169,23 +169,23 @@ const projects: Project[] = [
     phoneColor: "from-cyan-500/30 to-teal-500/10",
     badges: ["🏦 Banking System"],
   },
-  {
-    title: "Bintang Raga Gym Management & POS System",
-    category: "POS System",
-    device: "desktop",
-    desc: "Sistem manajemen gym dan kasir berbasis Laravel 10, React JS, Inertia, Tailwind CSS, dan MySQL dengan fitur member, membership, private trainer, produk, laporan, stok, notifikasi otomatis, dashboard owner dan kasir, serta PWA.",
-    stack: [
-      "Laravel 10",
-      "React JS",
-      "Inertia JS",
-      "Tailwind CSS",
-      "MySQL",
-      "PWA",
-    ],
-    image: "/Projects/BintangRaga.png",
-    macColor: "from-emerald-500/30 to-blue-500/10",
-    phoneColor: "from-blue-500/30 to-emerald-500/10",
-  },
+  // {
+  //   title: "Bintang Raga Gym Management & POS System",
+  //   category: "POS System",
+  //   device: "desktop",
+  //   desc: "Sistem manajemen gym dan kasir berbasis Laravel 10, React JS, Inertia, Tailwind CSS, dan MySQL dengan fitur member, membership, private trainer, produk, laporan, stok, notifikasi otomatis, dashboard owner dan kasir, serta PWA.",
+  //   stack: [
+  //     "Laravel 10",
+  //     "React JS",
+  //     "Inertia JS",
+  //     "Tailwind CSS",
+  //     "MySQL",
+  //     "PWA",
+  //   ],
+  //   image: "/Projects/BintangRaga.png",
+  //   macColor: "from-emerald-500/30 to-blue-500/10",
+  //   phoneColor: "from-blue-500/30 to-emerald-500/10",
+  // },
 ];
 
 function getBadgeClass(badge: string): string {
