@@ -33,36 +33,36 @@ interface GalleryItem {
 }
 
 const galleryItems: GalleryItem[] = [
- {
-  id: 1,
-  title: "Website Presentation",
-  location: "Masjid Raya An-Nur",
-  date: "2025",
-  category: "Projects",
-  image: "/gallery/annur-presentation.jpeg",
-  description:
-    "Presenting the development progress of the official Masjid Raya An-Nur website to the management team for evaluation and feature discussion.",
-},
-{
-  id: 2,
-  title: "Development Meeting",
-  location: "Masjid Raya An-Nur",
-  date: "2025",
-  category: "Projects",
-  image: "/gallery/annur-meeting.jpeg",
-  description:
-    "Technical discussion with the development team during the implementation of the Masjid Raya An-Nur website project.",
-},
-{
-  id: 3,
-  title: "Project Discussion",
-  location: "Bank Riau Kepri Syariah",
-  date: "2025",
-  category: "Internship",
-  image: "/gallery/brk-discussion.jpeg",
-  description:
-    "Collaborating with mentors and the development team to discuss project progress, implementation strategies, and technical solutions during my internship at Bank Riau Kepri Syariah.",
-},
+  {
+    id: 1,
+    title: "Website Presentation",
+    location: "Masjid Raya An-Nur",
+    date: "2025",
+    category: "Projects",
+    image: "/gallery/annur-presentation.jpeg",
+    description:
+      "Presenting the development progress of the official Masjid Raya An-Nur website to the management team for evaluation and feature discussion.",
+  },
+  {
+    id: 2,
+    title: "Development Meeting",
+    location: "Masjid Raya An-Nur",
+    date: "2025",
+    category: "Projects",
+    image: "/gallery/annur-meeting.jpeg",
+    description:
+      "Technical discussion with the development team during the implementation of the Masjid Raya An-Nur website project.",
+  },
+  {
+    id: 3,
+    title: "Project Discussion",
+    location: "Bank Riau Kepri Syariah",
+    date: "2025",
+    category: "Internship",
+    image: "/gallery/brk-discussion.jpeg",
+    description:
+      "Collaborating with mentors and the development team to discuss project progress, implementation strategies, and technical solutions during my internship at Bank Riau Kepri Syariah.",
+  },
 
 ];
 
@@ -296,11 +296,10 @@ export default function Gallery() {
             <button
               key={item}
               onClick={() => setFilter(item)}
-              className={`rounded-full px-6 py-3 text-sm font-semibold transition-all ${
-                filter === item
+              className={`rounded-full px-6 py-3 text-sm font-semibold transition-all ${filter === item
                   ? "bg-cyan-500 text-slate-950"
                   : "border border-white/10 bg-white/5 text-slate-300 hover:border-cyan-400/40"
-              }`}
+                }`}
             >
               {item}
             </button>
@@ -418,115 +417,115 @@ export default function Gallery() {
           })}
         </div>
 
-       <AnimatePresence>
-  {selected && (
-    <motion.div
-      className="fixed inset-0 z-[999] flex items-center justify-center bg-slate-950/90 p-3 backdrop-blur-xl sm:p-6"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      onClick={() => setSelected(null)}
-    >
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9, y: 30 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.9, y: 20 }}
-        transition={{ duration: 0.35 }}
-        onClick={(e) => e.stopPropagation()}
-        className="relative flex max-h-[92vh] w-full max-w-7xl flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900 shadow-[0_0_80px_rgba(34,211,238,.18)] sm:rounded-[40px] lg:max-h-[88vh]"
-      >
-        <button
-          onClick={() => setSelected(null)}
-          className="absolute right-4 top-4 z-30 rounded-full border border-white/10 bg-slate-800/80 p-2.5 text-white transition-all duration-300 hover:rotate-90 hover:bg-red-500 sm:right-6 sm:top-6 sm:p-3"
-        >
-          <X className="h-4 w-4 sm:h-5 sm:w-5" />
-        </button>
+        <AnimatePresence>
+          {selected && (
+            <motion.div
+              className="fixed inset-0 z-[999] flex items-center justify-center bg-slate-950/90 p-3 backdrop-blur-xl sm:p-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelected(null)}
+            >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                transition={{ duration: 0.35 }}
+                onClick={(e) => e.stopPropagation()}
+                className="relative flex max-h-[92vh] w-full max-w-7xl flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900 shadow-[0_0_80px_rgba(34,211,238,.18)] sm:rounded-[40px] lg:max-h-[88vh]"
+              >
+                <button
+                  onClick={() => setSelected(null)}
+                  className="absolute right-4 top-4 z-30 rounded-full border border-white/10 bg-slate-800/80 p-2.5 text-white transition-all duration-300 hover:rotate-90 hover:bg-red-500 sm:right-6 sm:top-6 sm:p-3"
+                >
+                  <X className="h-4 w-4 sm:h-5 sm:w-5" />
+                </button>
 
-        {/* Scrollable wrapper so content never overflows the modal on small screens */}
-        <div className="grid overflow-y-auto lg:grid-cols-5 lg:overflow-hidden">
-          {/* IMAGE */}
-          <div className="relative col-span-3 h-[45vh] w-full shrink-0 overflow-hidden bg-black sm:h-[55vh] lg:h-auto lg:min-h-[650px]">
-            <Image
-              src={selected.image}
-              alt={selected.title}
-              fill
-              sizes="(max-width: 1024px) 100vw, 60vw"
-              className="object-contain transition duration-700 hover:scale-105"
-            />
+                {/* Scrollable wrapper so content never overflows the modal on small screens */}
+                <div className="grid overflow-y-auto lg:grid-cols-5 lg:overflow-hidden">
+                  {/* IMAGE */}
+                  <div className="relative col-span-3 h-[45vh] w-full shrink-0 overflow-hidden bg-black sm:h-[55vh] lg:h-auto lg:min-h-[650px]">
+                    <Image
+                      src={selected.image}
+                      alt={selected.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      className="object-contain transition duration-700 hover:scale-105"
+                    />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
-            <div className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8">
-              <span className="rounded-full bg-cyan-500/20 px-3 py-1.5 text-xs font-semibold text-cyan-300 backdrop-blur sm:px-4 sm:py-2 sm:text-sm">
-                {selected.category}
-              </span>
-            </div>
-          </div>
+                    <div className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8">
+                      <span className="rounded-full bg-cyan-500/20 px-3 py-1.5 text-xs font-semibold text-cyan-300 backdrop-blur sm:px-4 sm:py-2 sm:text-sm">
+                        {selected.category}
+                      </span>
+                    </div>
+                  </div>
 
-          {/* DETAIL */}
-          <div className="relative col-span-2 flex flex-col justify-between gap-8 p-6 sm:p-10 lg:overflow-y-auto lg:p-10">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full bg-cyan-500/15 px-4 py-1.5 text-xs font-semibold text-cyan-300 sm:px-5 sm:py-2 sm:text-sm">
-                <Camera className="h-4 w-4" />
-                Gallery Details
-              </div>
+                  {/* DETAIL */}
+                  <div className="relative col-span-2 flex flex-col justify-between gap-8 p-6 sm:p-10 lg:overflow-y-auto lg:p-10">
+                    <div>
+                      <div className="inline-flex items-center gap-2 rounded-full bg-cyan-500/15 px-4 py-1.5 text-xs font-semibold text-cyan-300 sm:px-5 sm:py-2 sm:text-sm">
+                        <Camera className="h-4 w-4" />
+                        Gallery Details
+                      </div>
 
-              <h2 className="mt-6 text-2xl font-black text-white sm:mt-8 sm:text-4xl">
-                {selected.title}
-              </h2>
+                      <h2 className="mt-6 text-2xl font-black text-white sm:mt-8 sm:text-4xl">
+                        {selected.title}
+                      </h2>
 
-              <p className="mt-4 text-sm leading-7 text-slate-300 sm:mt-6 sm:text-base sm:leading-8">
-                {selected.description}
-              </p>
+                      <p className="mt-4 text-sm leading-7 text-slate-300 sm:mt-6 sm:text-base sm:leading-8">
+                        {selected.description}
+                      </p>
 
-              <div className="mt-6 space-y-4 sm:mt-10 sm:space-y-5">
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <Calendar className="h-5 w-5 shrink-0 text-cyan-400" />
-                  <span className="text-sm text-slate-300 sm:text-base">
-                    {selected.date}
-                  </span>
-                </div>
+                      <div className="mt-6 space-y-4 sm:mt-10 sm:space-y-5">
+                        <div className="flex items-center gap-3 sm:gap-4">
+                          <Calendar className="h-5 w-5 shrink-0 text-cyan-400" />
+                          <span className="text-sm text-slate-300 sm:text-base">
+                            {selected.date}
+                          </span>
+                        </div>
 
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <Images className="h-5 w-5 shrink-0 text-cyan-400" />
-                  <span className="text-sm text-slate-300 sm:text-base">
-                    {selected.location}
-                  </span>
-                </div>
-              </div>
-            </div>
+                        <div className="flex items-center gap-3 sm:gap-4">
+                          <Images className="h-5 w-5 shrink-0 text-cyan-400" />
+                          <span className="text-sm text-slate-300 sm:text-base">
+                            {selected.location}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
 
-            <div className="space-y-5 sm:space-y-6">
-              <div className="rounded-2xl border border-cyan-500/20 bg-cyan-500/10 p-4 sm:rounded-3xl sm:p-6">
-                <div className="flex items-start gap-3 sm:gap-4">
-                  <Sparkles className="mt-1 h-5 w-5 shrink-0 text-cyan-400 sm:h-6 sm:w-6" />
+                    <div className="space-y-5 sm:space-y-6">
+                      <div className="rounded-2xl border border-cyan-500/20 bg-cyan-500/10 p-4 sm:rounded-3xl sm:p-6">
+                        <div className="flex items-start gap-3 sm:gap-4">
+                          <Sparkles className="mt-1 h-5 w-5 shrink-0 text-cyan-400 sm:h-6 sm:w-6" />
 
-                  <div>
-                    <h3 className="text-sm font-bold text-white sm:text-base">
-                      Portfolio Highlight
-                    </h3>
+                          <div>
+                            <h3 className="text-sm font-bold text-white sm:text-base">
+                              Portfolio Highlight
+                            </h3>
 
-                    <p className="mt-2 text-xs leading-6 text-slate-400 sm:text-sm sm:leading-7">
-                      This gallery showcases memorable moments,
-                      achievements, internships, competitions, and
-                      technology projects throughout my academic and
-                      professional journey.
-                    </p>
+                            <p className="mt-2 text-xs leading-6 text-slate-400 sm:text-sm sm:leading-7">
+                              This gallery showcases memorable moments,
+                              achievements, internships, competitions, and
+                              technology projects throughout my academic and
+                              professional journey.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button className="flex w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-cyan-500 via-sky-500 to-violet-500 px-6 py-3.5 text-sm font-semibold text-slate-950 transition duration-300 hover:scale-[1.02] sm:py-4 sm:text-base">
+                        <ExternalLink className="h-5 w-5" />
+                        Open Full Resolution
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <button className="flex w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-cyan-500 via-sky-500 to-violet-500 px-6 py-3.5 text-sm font-semibold text-slate-950 transition duration-300 hover:scale-[1.02] sm:py-4 sm:text-base">
-                <ExternalLink className="h-5 w-5" />
-                Open Full Resolution
-              </button>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </motion.div>
-  )}
-</AnimatePresence>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );

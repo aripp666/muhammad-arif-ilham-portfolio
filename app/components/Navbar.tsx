@@ -115,13 +115,13 @@ export default function Navbar() {
             })}
           </div>
 
-          <a
+          {/* <a
             href="/CV ATS MODE SERIUS.pdf"
             className="group hidden items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-xs font-black text-cyan-300 transition hover:bg-cyan-400 hover:text-slate-950 lg:inline-flex"
           >
             <Download size={15} />
             CV
-          </a>
+          </a> */}
 
           <button
             onClick={() => setOpen(!open)}
