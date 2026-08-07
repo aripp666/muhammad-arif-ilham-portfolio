@@ -104,13 +104,13 @@ export default function Hero() {
               Lihat Project
             </a>
 
-            <a
+            {/* <a
               href="/CV ATS MODE SERIUS.pdf"
               className="inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-400/40 px-8 py-4 font-bold text-cyan-300 transition hover:-translate-y-1 hover:bg-cyan-400/10"
             >
               <Download size={18} />
               Download CV
-            </a>
+            </a> */}
           </motion.div>
 
           <motion.div
